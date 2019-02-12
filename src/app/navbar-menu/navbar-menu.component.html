@@ -1,0 +1,12 @@
+<div class="navbarMenu-container">
+  <div class="container">
+    <div class="row">
+      <h2 class="name">{{title}}</h2>
+      <ul class="menu-list" *ngFor="let item of menuList">
+        <li class="menu-element">{{item}}</li>
+      </ul>
+      <i class="fas fa-user-circle"></i>
+      <span class="badge badge-pill badge-danger">{{notification}}</span>
+    </div>
+  </div>
+</div>
