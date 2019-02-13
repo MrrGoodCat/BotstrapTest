@@ -2,9 +2,15 @@
   <div class="container">
     <div class="row">
       <h2 class="name">{{title}}</h2>
-      <ul class="menu-list" *ngFor="let item of menuList">
+      <ul class="menu-list">
         <li class="menu-element">
-          <a href="#">{{item}}</a>
+          <a [routerLink]="['/dashboard']">Environments</a>
+        </li>
+        <li class="menu-element">
+          <a href="#">Installation</a>
+        </li>
+        <li class="menu-element">
+          <a href="#">Help</a>
         </li>
       </ul>
       <i class="fas fa-user-circle"></i>
