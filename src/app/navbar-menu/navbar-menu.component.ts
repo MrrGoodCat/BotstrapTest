@@ -11,7 +11,7 @@ export class NavbarMenuComponent implements OnInit {
   notification = 15;
   menuList: string[];
   constructor() {
-    this.menuList = ['Some', 'Anything'];
+    this.menuList = ['Environments', 'Installation', 'Help'];
    }
 
   ngOnInit() {
