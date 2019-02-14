@@ -24,17 +24,22 @@
         list-style: none
         li
           float: left
-          padding-top: 19px
-          padding-right: 30px
           display: block
-          color: #ffffff
-          font-size: 18px
-          height: 70px
-          //border: 1px solid red
           cursor: pointer
-        li:hover
-          color: #FFB937
-        li:active
-          color: #FFB937
+          a
+            height: 70px
+            padding-top: 19px
+            padding-right: 15px
+            padding-left: 15px
+            display: block
+            text-decoration: none
+            color: #ffffff
+            font-size: 18px
+          &:hover>a
+            color: #FFB937
+            &:active
+              background-color: black
+
+
 
 
