@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class EnvironmentInfoCardComponent implements OnInit {
 
   constructor() { }
+  current = 30;
+  max = 100;
 
   environmentName = 'Engage UHG Performance';
+
+  doSomethingWithCurrentValue(value: number) {
+
+  }
   ngOnInit() {
   }
 

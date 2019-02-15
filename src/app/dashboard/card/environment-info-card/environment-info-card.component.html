@@ -1,8 +1,42 @@
-<div class="card-container">
+<!-- <div class="card-container">
   <div class="row">
     <h5>{{environmentName}}</h5>
   </div>
   <div class="row">
 
   </div>
-</div>
+</div> -->
+<mat-card class="mat-card">
+  <mat-card-header class="mat-card-header">
+    <mat-card-title class="mat-card-title">{{
+      environmentName
+    }}</mat-card-title>
+    <mat-card-subtitle class="mat-card-subtitle">Some text</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="progress-wraper">
+        <div class="current" ng-reflect-ng-style="[object Object]" style="top: 50%; bottom: auto; left: 50%; transform: translateY(250%)  translateX(15%); font-size: 25.7143px;">{{current}}/{{max}}</div>
+        <round-progress
+                        [current]="current"
+                        [max]="max"
+                        [color]="'green'"
+                        [background]="'#eaeaea'"
+                        [radius]="80"
+                        [stroke]="15"
+                        [semicircle]="false"
+                        [rounded]="false"
+                        [clockwise]="true"
+                        [responsive]="false"
+                        [duration]="800"
+                        [animation]="'easeInOutQuart'"
+                        [animationDelay]="0"
+                        (onRender)="doSomethingWithCurrentValue($event)">
+        </round-progress>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" >OK</button>
+  </mat-card-actions>
+</mat-card>
