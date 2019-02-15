@@ -13,6 +13,14 @@ const routes: Routes = [
     loadChildren: './dashboard/dashboard.module#DashboardModule'
   },
   {
+    path: 'help',
+    loadChildren: './help/help.module#HelpModule'
+  },
+  {
+    path: 'installation',
+    loadChildren: './installation/installation.module#InstallationModule'
+  },
+  {
     path: '',
     redirectTo: 'welcome',
     pathMatch: 'full'

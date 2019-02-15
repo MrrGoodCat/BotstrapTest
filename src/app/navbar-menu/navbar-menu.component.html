@@ -3,14 +3,14 @@
     <div class="row">
       <h2 class="name">{{title}}</h2>
       <ul class="menu-list">
-        <li class="menu-element">
+        <li routerLinkActive="active" class="menu-element">
           <a [routerLink]="['/dashboard']">Environments</a>
         </li>
-        <li class="menu-element">
-          <a href="#">Installation</a>
+        <li routerLinkActive="active" class="menu-element">
+          <a [routerLink]="['/installation']">Installation</a>
         </li>
-        <li class="menu-element">
-          <a href="#">Help</a>
+        <li routerLinkActive="active" class="menu-element">
+          <a [routerLink]="['/help']">Help</a>
         </li>
       </ul>
       <i class="fas fa-user-circle"></i>

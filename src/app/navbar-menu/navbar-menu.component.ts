@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-menu',
@@ -10,7 +11,7 @@ export class NavbarMenuComponent implements OnInit {
   title = 'Dashboard';
   notification = 15;
   menuList: string[];
-  constructor() {
+  constructor(private router: Router) {
     this.menuList = ['Environments', 'Installation', 'Help'];
    }
 
