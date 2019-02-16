@@ -4,21 +4,61 @@
   background-color: #fafafa
   margin: 20px
   display: flex
+  flex-direction: column
+  justify-content: space-between
+  border-radius: 3px
   position: relative
-  &::before
-    width: 300px
-    height: 350px
-    position: absolute
-    content: ''
-    //box-shadow: 10px 10px 40px rgba(252,55,82,.15)
-    display: block
-  &::after
-    position: absolute
-    content: ''
-    width: 300px
-    height: 350px
-    //box-shadow: -10px -10px 40px rgba(12,61,120,.15)
-    display: block
   box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.1)
   .row
-    margin: 15px
+    position: relative
+    .card-header
+      width: 315px
+      height: 70px
+      background-color: #9E3F78
+      box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.1)
+      h5
+        color: #fafafa
+        margin-top: -5px
+      h6
+        color: #c0c0c0
+    .circle-plate
+      position: absolute
+      height: 68px
+      width: 68px
+      border-radius: 34px
+      background-color: #fafafa
+      top: 40px
+      left: 220px
+      button
+        margin: 6px
+        background-color: #9E3F78
+    .triangle
+      position: absolute
+      top: 70px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 0 15px 15px 0
+      border-color: transparent #64265c transparent transparent
+  .content
+    position: relative
+    display: flex
+    left: 20px
+    .info
+
+  .footer
+    position: relative
+    display: flex
+    align-content: center
+    height: 70px
+    width: 300px
+    //background-color: lighten(#EFB7CC, 6%)
+    background-color: lighten(#d53249, 35%)
+    border-radius: 0px 0px 4px 4px
+    .btn-details
+      margin: 16px
+      left: 193px
+      //background-color: #64265C
+      background-color: #9E3F78
+      color: #fafafa
+

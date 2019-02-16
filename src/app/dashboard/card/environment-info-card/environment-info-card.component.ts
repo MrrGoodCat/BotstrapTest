@@ -8,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class EnvironmentInfoCardComponent implements OnInit {
 
   constructor() { }
-  current = 30;
-  max = 100;
 
-  environmentName = 'Engage UHG Performance';
+  spinerColor = 'accent';
+  spinerMode = 'determinate';
+  spinerValue = 80;
+
+  environmentName = 'Engage UHG Performanceeee'; // Some text for test more and more WWWWWWWWWWWWWW
+  version = '6.6.5';
 
   doSomethingWithCurrentValue(value: number) {
 
