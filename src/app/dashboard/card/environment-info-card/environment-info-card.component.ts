@@ -11,10 +11,13 @@ export class EnvironmentInfoCardComponent implements OnInit {
 
   spinerColor = 'accent';
   spinerMode = 'determinate';
-  spinerValue = 80;
+  spinerValue = 96;
 
   environmentName = 'Engage UHG Performanceeee'; // Some text for test more and more WWWWWWWWWWWWWW
   version = '6.6.5';
+  lastAction = 'Snapshot';
+  ciResult = 'none';
+  operationStatus = 'Failed';
 
   doSomethingWithCurrentValue(value: number) {
 

@@ -17,14 +17,19 @@
     </div>
   </div>
   <div class="content">
-    <mat-progress-spinner
-        class="example-margin"
-        [color]="spinerColor"
-        [mode]="spinerMode"
-        [value]="spinerValue">
-    </mat-progress-spinner>
+    <div class="spiner">
+      <mat-progress-spinner
+          class="example-margin"
+          [color]="spinerColor"
+          [mode]="spinerMode"
+          [value]="spinerValue">
+      </mat-progress-spinner>
+      <span>{{spinerValue}}%</span>
+  </div>
     <div class="info">
-      <h6>Last action:</h6>
+      <p><span>Last action: </span>{{lastAction}}</p>
+      <p><span>Action status: </span>{{operationStatus}}</p>
+      <p><span>CI result: </span>{{ciResult}}</p>
     </div>
     <!-- <div class="progress-wraper">
       <div class="current" ng-reflect-ng-style="[object Object]" style="top: 50%; bottom: auto; left: 50%; transform: translateY(250%)  translateX(15%); font-size: 25.7143px;">{{current}}/{{max}}</div>
