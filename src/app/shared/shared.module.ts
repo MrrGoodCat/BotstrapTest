@@ -5,8 +5,11 @@ import {MatButtonModule,
         MatBadgeModule,
         MatCardModule,
         MatProgressSpinnerModule,
-        MatMenuModule
+        MatMenuModule,
+        MatSelectModule
         } from '@angular/material';
+import { ColorThemes } from './color-themes';
+import { ColorThemeMain } from './color-theme-main';
 
 
 @NgModule({
@@ -18,14 +21,17 @@ import {MatButtonModule,
     MatCardModule,
     MatBadgeModule,
     MatProgressSpinnerModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule
   ],
+  providers: [ColorThemes, ColorThemeMain],
   exports: [
     MatButtonModule,
     MatCheckboxModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }

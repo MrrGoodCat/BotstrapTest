@@ -1,5 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-navbar-menu></app-navbar-menu>
+<h4>Basic mat-select</h4>
+  <mat-select [(value)]="selected" (selectionChange)="selectTheme(value)">
+    <mat-option *ngFor="let theme of themes" [value]="theme.value">
+      {{theme.viewValue}}
+    </mat-option>
+  </mat-select>
 <router-outlet></router-outlet>
 <div class="container">
   <div class="row">

@@ -1,7 +1,7 @@
 <div class="card-container">
   <div class="row">
     <div class="card-header">
-      <h5>{{environmentName}}</h5>
+      <h5 >{{environmentName}}</h5>
       <h6>Current version: {{version}}</h6>
     </div>
     <div class="triangle"></div>
@@ -52,6 +52,6 @@
   </div> -->
   </div>
   <div class="footer">
-    <button mat-raised-button class="btn-details">Details</button>
+    <button mat-raised-button [style.background-color]="color.getPrimaryColor(themeName)" class="btn-details">Details</button>
   </div>
 </div>
