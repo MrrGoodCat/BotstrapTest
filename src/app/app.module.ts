@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     SharedModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
