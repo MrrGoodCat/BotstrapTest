@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import { SharedModule } from '../shared/shared.module';
 import { EnvironmentInfoCardComponent } from './card/environment-info-card/environment-info-card.component';
 import { SystemDetailsComponent } from './card/environment-info-card/system-details.component';
+import { DashboardService } from './dashboard.service';
 
 @NgModule({
   declarations: [DashboardComponent, EnvironmentInfoCardComponent, SystemDetailsComponent],
@@ -11,7 +12,7 @@ import { SystemDetailsComponent } from './card/environment-info-card/system-deta
     SharedModule,
     DashboardRoutingModule
   ],
-  providers: [],
+  providers: [DashboardService],
   exports: []
 })
 export class DashboardModule { }

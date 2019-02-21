@@ -1,4 +1,6 @@
 import { Component, OnInit} from '@angular/core';
+import { Environment } from '../../environment';
+import { DashboardService } from '../../dashboard.service';
 
 @Component({
   selector: 'app-environment-info-card',
@@ -7,8 +9,12 @@ import { Component, OnInit} from '@angular/core';
 })
 export class EnvironmentInfoCardComponent implements OnInit {
 
-  constructor() {
+  constructor( public dashboardServise: DashboardService ) {
+    this.spinerValue = 0;
   }
+
+  environments: Environment[];
+  errorMessage: string;
 
   spinerColor = 'accent';
   spinerMode = 'determinate';
@@ -22,6 +28,10 @@ export class EnvironmentInfoCardComponent implements OnInit {
 
 
   ngOnInit() {
+    this.dashboardServise.getEnvironments()
+      .subscribe(envs => this.environments = envs,
+                  error => this.errorMessage = error);
+    console.log('Environments is: ', JSON.stringify(this.environments));
   }
 
 }

@@ -10,38 +10,38 @@ export class EnvironmentData implements InMemoryDbService, InMemoryBackendConfig
       {
         id: 1,
         name: 'Engage UHG Performance',
-        type: EnvironmentType.Engage,
-        version: '6.6.5',
-        servers: [
-          {
-            hostname: 'app-123',
-            ip: '10.128.32.123'
-          },
-          {
-            hostname: 'dbdm-98',
-            ip: '10.128.32.98'
-          }
-        ],
-        lastOperation: 'SP install',
-        ciResult: 'passed'
+        // type: EnvironmentType.Engage,
+        // version: '6.6.5',
+        // servers: [
+        //   {
+        //     hostname: 'app-123',
+        //     ip: '10.128.32.123'
+        //   },
+        //   {
+        //     hostname: 'dbdm-98',
+        //     ip: '10.128.32.98'
+        //   }
+        // ],
+        // lastOperation: 'SP install',
+        // ciResult: 'passed'
       },
       {
-        id: 1,
+        id: 2,
         name: 'Engage 123',
-        type: EnvironmentType.Engage,
-        version: '6.7.0',
-        servers: [
-          {
-            hostname: 'app-123',
-            ip: '10.128.32.123'
-          },
-          {
-            hostname: 'dbdm-98',
-            ip: '10.128.32.98'
-          }
-        ],
-        lastOperation: 'snapshot',
-        ciResult: 'none'
+        // type: EnvironmentType.Engage,
+        // version: '6.7.0',
+        // servers: [
+        //   {
+        //     hostname: 'app-123',
+        //     ip: '10.128.32.123'
+        //   },
+        //   {
+        //     hostname: 'dbdm-98',
+        //     ip: '10.128.32.98'
+        //   }
+        // ],
+        // lastOperation: 'snapshot',
+        // ciResult: 'none'
       }
     ];
     return { environments };

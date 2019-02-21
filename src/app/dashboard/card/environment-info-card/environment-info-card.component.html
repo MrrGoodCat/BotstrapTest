@@ -1,39 +1,43 @@
-<div class="card-container">
-  <div class="row">
-    <div class="card-header">
-      <h5 >{{environmentName}}</h5>
-
+<div class="dashboard">
+  <div class="card-container">
+    <div class="row">
+      <div class="card-header">
+        <h5>{{ environmentName }}</h5>
+      </div>
+      <div class="triangle"></div>
+      <div class="circle-plate">
+        <button mat-fab [matMenuTriggerFor]="menu">
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Turn Off</button>
+          <button mat-menu-item>Apply Snapshot</button>
+          <button mat-menu-item>Start CI Tests</button>
+          <button mat-menu-item>Wizard</button>
+          <button mat-menu-item>Settings</button>
+        </mat-menu>
+      </div>
     </div>
-    <div class="triangle"></div>
-    <div class="circle-plate">
-      <button mat-fab [matMenuTriggerFor]="menu"><i class="fas fa-chevron-down"></i></button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Turn Off</button>
-        <button mat-menu-item>Apply Snapshot</button>
-        <button mat-menu-item>Start CI Tests</button>
-        <button mat-menu-item>Wizard</button>
-        <button mat-menu-item>Settings</button>
-      </mat-menu>
-    </div>
-  </div>
-  <div class="content">
-    <div class="spiner">
-      <mat-progress-spinner
+    <div class="content">
+      <div class="spiner">
+        <mat-progress-spinner
           class="example-margin"
           [color]="spinerColor"
           [mode]="spinerMode"
-          [value]="spinerValue">
-      </mat-progress-spinner>
-      <span>{{spinerValue}}%</span>
-  </div>
-    <div class="info">
-      <p><span>Current version: </span>{{version}}</p>
-      <p><span>Last action: </span>{{lastAction}}</p>
-      <p><span>Action status: </span>{{operationStatus}}</p>
-      <p><span>CI result: </span>{{ciResult}}</p>
+          [value]="spinerValue"
+        >
+        </mat-progress-spinner>
+        <span>{{ spinerValue }}%</span>
+      </div>
+      <div class="info">
+        <p><span>Current version: </span>{{ version }}</p>
+        <p><span>Last action: </span>{{ lastAction }}</p>
+        <p><span>Action status: </span>{{ operationStatus }}</p>
+        <p><span>CI result: </span>{{ ciResult }}</p>
+      </div>
     </div>
-  </div>
-  <div class="footer">
-    <button mat-raised-button class="btn-details">Details</button>
+    <div class="footer">
+      <button mat-raised-button class="btn-details">Details</button>
+    </div>
   </div>
 </div>

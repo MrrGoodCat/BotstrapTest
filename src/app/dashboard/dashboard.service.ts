@@ -3,8 +3,9 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 import { Observable } from 'rxjs';
 import { map, tap, catchError } from 'rxjs/operators';
-import 'rxjs/add/observable/throw';
-import 'rxjs/add/observable/of';
+import { throwError, concat, of } from 'rxjs';
+// import 'rxjs/add/observable/throw';
+// import 'rxjs/add/observable/of';
 import { Environment } from './environment';
 
 @Injectable()
@@ -22,7 +23,7 @@ export class DashboardService {
   }
 
   private extractData(response: Response) {
-    let body = response.json();
+    const body = response.json();
     return body.data || {};
   }
 
@@ -31,5 +32,8 @@ export class DashboardService {
     // instead of just logging it to the console
     console.error(error);
     return Observable.throw(error.json().error || 'Server error');
+
+    // const result = concat(of(error), throwError(new Error('oops!')));
+    // result.subscribe(x => console.log(x), e => console.error(e));
   }
 }

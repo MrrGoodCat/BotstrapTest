@@ -8,9 +8,14 @@ import { AppComponent } from './app.component';
 import { NavbarMenuComponent } from './navbar-menu/navbar-menu.component';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DataService } from './data.service';
+import { HttpModule } from '@angular/http';
+import { EnvironmentData } from './dashboard/environment-data';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,9 @@ import { DataService } from './data.service';
     // BrowserModule,
     NgbModule,
     SharedModule,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(EnvironmentData, { delay: 1000 }),
+    HttpModule,
     AppRoutingModule
   ],
   providers: [ DataService ],
