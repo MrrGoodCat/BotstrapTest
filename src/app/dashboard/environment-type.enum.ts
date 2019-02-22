@@ -1,4 +1,4 @@
 export enum EnvironmentType {
-  Engage,
-  Sentinel
+  Engage = 'Engage',
+  Sentinel = 'Sentinel'
 }

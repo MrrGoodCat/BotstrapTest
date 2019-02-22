@@ -13,7 +13,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { DataService } from './data.service';
 import { HttpModule } from '@angular/http';
 import { EnvironmentData } from './dashboard/environment-data';
 
@@ -31,11 +30,11 @@ import { EnvironmentData } from './dashboard/environment-data';
     NgbModule,
     SharedModule,
     HttpClientModule,
-    InMemoryWebApiModule.forRoot(EnvironmentData, { delay: 1000 }),
     HttpModule,
+    InMemoryWebApiModule.forRoot(EnvironmentData, { delay: 1000 }),
     AppRoutingModule
   ],
-  providers: [ DataService ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

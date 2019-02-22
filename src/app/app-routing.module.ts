@@ -9,7 +9,7 @@ const routes: Routes = [
     component: WelcomeComponent
   },
   {
-    path: 'dashboard',
+    path: 'environments',
     loadChildren: './dashboard/dashboard.module#DashboardModule'
   },
   {

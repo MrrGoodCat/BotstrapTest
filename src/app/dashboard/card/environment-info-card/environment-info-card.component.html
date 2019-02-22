@@ -1,8 +1,8 @@
-<div class="dashboard">
-  <div class="card-container">
+<ul class="dashboard">
+  <li class="card-container" *ngFor="let env of environments">
     <div class="row">
       <div class="card-header">
-        <h5>{{ environmentName }}</h5>
+        <h5>{{ env.name }}</h5>
       </div>
       <div class="triangle"></div>
       <div class="circle-plate">
@@ -30,14 +30,14 @@
         <span>{{ spinerValue }}%</span>
       </div>
       <div class="info">
-        <p><span>Current version: </span>{{ version }}</p>
-        <p><span>Last action: </span>{{ lastAction }}</p>
+        <p><span>Current version: </span>{{ env.version }}</p>
+        <p><span>Last action: </span>{{ env.lastOperation }}</p>
         <p><span>Action status: </span>{{ operationStatus }}</p>
-        <p><span>CI result: </span>{{ ciResult }}</p>
+        <p><span>CI result: </span>{{ env.ciResult }}</p>
       </div>
     </div>
     <div class="footer">
       <button mat-raised-button class="btn-details">Details</button>
     </div>
-  </div>
-</div>
+  </li>
+</ul>

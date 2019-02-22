@@ -28,10 +28,10 @@ export class EnvironmentInfoCardComponent implements OnInit {
 
 
   ngOnInit() {
-    this.dashboardServise.getEnvironments()
-      .subscribe(envs => this.environments = envs,
-                  error => this.errorMessage = error);
-    console.log('Environments is: ', JSON.stringify(this.environments));
+    this.dashboardServise.getEnvironments().subscribe((data: any[]) => {
+      console.log(data);
+      this.environments = data;
+    });
   }
 
 }
