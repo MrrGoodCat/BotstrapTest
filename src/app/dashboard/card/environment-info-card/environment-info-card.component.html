@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="footer">
-      <button mat-raised-button class="btn-details">Details</button>
+      <button mat-raised-button [routerLink]="['/environments', env.id, 'details']" class="btn-details">Details</button>
     </div>
   </li>
 </ul>

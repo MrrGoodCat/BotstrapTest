@@ -28,6 +28,10 @@ export class DashboardService {
     return this.httpClient.get<Environment[]>(this.baseUrl);
   }
 
+  public getEnvironment(id: number): Observable<Environment> {
+    return this.httpClient.get<Environment>(`${this.baseUrl}/${id}`);
+  }
+
   private extractData(response: Response) {
     const body = response.json();
     return body.data || {};
