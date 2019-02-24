@@ -6,7 +6,8 @@ import {MatButtonModule,
         MatCardModule,
         MatProgressSpinnerModule,
         MatMenuModule,
-        MatSelectModule
+        MatSelectModule,
+        MatListModule
         } from '@angular/material';
 import { ColorThemes } from './color-themes';
 import { ColorThemeMain } from './color-theme-main';
@@ -22,7 +23,8 @@ import { ColorThemeMain } from './color-theme-main';
     MatBadgeModule,
     MatProgressSpinnerModule,
     MatMenuModule,
-    MatSelectModule
+    MatSelectModule,
+    MatListModule
   ],
   providers: [ColorThemes, ColorThemeMain],
   exports: [
@@ -31,7 +33,8 @@ import { ColorThemeMain } from './color-theme-main';
     MatCardModule,
     MatProgressSpinnerModule,
     MatMenuModule,
-    MatSelectModule
+    MatSelectModule,
+    MatListModule
   ]
 })
 export class SharedModule { }

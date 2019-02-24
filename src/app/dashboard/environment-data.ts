@@ -20,6 +20,46 @@ export class EnvironmentData implements InMemoryDbService {
           {
             hostname: 'dbdm-98',
             ip: '10.128.32.98'
+          },
+          {
+            hostname: 'app-123',
+            ip: '10.128.32.123'
+          },
+          {
+            hostname: 'dbdm-98',
+            ip: '10.128.32.98'
+          },
+          {
+            hostname: 'app-123',
+            ip: '10.128.32.123'
+          },
+          {
+            hostname: 'dbdm-98',
+            ip: '10.128.32.98'
+          },
+          {
+            hostname: 'app-123',
+            ip: '10.128.32.123'
+          },
+          {
+            hostname: 'dbdm-98',
+            ip: '10.128.32.98'
+          },
+          {
+            hostname: 'app-123',
+            ip: '10.128.32.123'
+          },
+          {
+            hostname: 'dbdm-98',
+            ip: '10.128.32.98'
+          },
+          {
+            hostname: 'app-123',
+            ip: '10.128.32.123'
+          },
+          {
+            hostname: 'dbdm-98',
+            ip: '10.128.32.98'
           }
         ],
         lastOperation: 'SP install',
