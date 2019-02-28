@@ -13,8 +13,12 @@
           <a [routerLink]="['/help']">Help</a>
         </li>
       </ul>
-      <i class="fas fa-user-circle"></i>
+      <a [routerLink]="['/login']" (click)="auth.login()">Login</a>
+      <a (click)="auth.login()" routerLinkActive="router-link-active" >
+        <i class="fas fa-user-circle" [ngClass]="{'hide': !auth.logedin}"></i>
+      </a>
       <span class="badge badge-pill badge-danger">{{notification}}</span>
+
     </div>
   </div>
 </div>

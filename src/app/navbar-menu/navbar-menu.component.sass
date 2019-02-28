@@ -10,6 +10,9 @@
   // left: 0
   // right: 0
   // z-index: 2
+  .hide
+    display: none !important
+
   .container
     .row
       position: relative
@@ -17,12 +20,16 @@
         padding: 12px
         margin-right: 5%
         color: $primary-contrast-text
-      i
-        position: absolute
-        font-size: 50px
-        padding: 10px
-        right: 0
-        color: $primary-contrast-text
+      a
+        i
+          //display: block
+          position: absolute
+          font-size: 50px
+          padding: 10px
+          right: 0
+          color: $primary-contrast-text
+        .hide
+          display: none !important
       span
         position: absolute
         right: 0

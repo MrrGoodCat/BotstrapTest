@@ -9,6 +9,10 @@ const routes: Routes = [
     component: WelcomeComponent
   },
   {
+    path: 'login',
+    loadChildren: './user/user.module#UserModule'
+  },
+  {
     path: 'environments',
     loadChildren: './dashboard/dashboard.module#DashboardModule'
   },

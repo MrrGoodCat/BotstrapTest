@@ -31,7 +31,7 @@ import { EnvironmentData } from './dashboard/environment-data';
     SharedModule,
     HttpClientModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(EnvironmentData, { delay: 1000 }),
+    InMemoryWebApiModule.forRoot(EnvironmentData, { delay: 10 }),
     AppRoutingModule
   ],
   providers: [ ],

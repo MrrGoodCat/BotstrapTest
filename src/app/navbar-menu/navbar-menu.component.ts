@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../user/authentication.service';
 
 @Component({
   selector: 'app-navbar-menu',
@@ -11,9 +12,10 @@ export class NavbarMenuComponent implements OnInit {
   title = 'Dashboard';
   notification = 15;
   menuList: string[];
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              protected auth: AuthenticationService) {
     this.menuList = ['Environments', 'Installation', 'Help'];
-   }
+  }
 
   ngOnInit() {
   }
