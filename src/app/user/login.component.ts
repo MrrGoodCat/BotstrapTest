@@ -15,14 +15,20 @@ export class LoginComponent implements OnInit {
   }
 
   email = new FormControl('', [Validators.required, Validators.email]);
+  name = new FormControl('', [Validators.minLength(3)]);
+  firstName: string;
   hide = true;
 
-  getErrorMessage() {
+  getEmailErrorMessage() {
     return this.email.hasError('required') ? 'You must enter a value' :
         this.email.hasError('email') ? 'Not a valid email' :
-            '';
+            'Some error';
   }
 
+  getNameErrorMessage() {
+    return this.name.hasError('required') ? 'You must enter a value' :
+            'First Name is required, and must be at least 3 characters.';
+  }
   signIn(loginForm: NgForm) {
 
   }
