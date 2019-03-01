@@ -1,0 +1,24 @@
+@import "../color-themas.sass"
+
+// Pannel
+
+.pannel
+  width: 90%
+  margin: 2% 5% 0% 5%
+  box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.1)
+  .pannel-header
+    border-radius: 4px 4px 0 0
+    height: 70px
+    background-color: $primary-main
+    h3
+      color: $primary-contrast-text
+      padding: 14px 0 0 30px
+  .pannel-content
+    position: relative
+    display: flex
+    justify-content: space-between
+    border-radius: 0 0 4px 4px
+    border: 1px solid $primary-main
+    min-height: 70px
+    max-height: 75vh
+    overflow: auto

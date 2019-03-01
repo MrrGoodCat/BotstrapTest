@@ -1,5 +1,5 @@
 <div class="navbarMenu-container">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <h2 class="name">{{title}}</h2>
       <ul class="menu-list">
@@ -13,11 +13,25 @@
           <a [routerLink]="['/help']">Help</a>
         </li>
       </ul>
-      <a [routerLink]="['/login']" (click)="auth.login()">Login</a>
-      <a (click)="auth.login()" routerLinkActive="router-link-active" >
-        <i class="fas fa-user-circle" [ngClass]="{'hide': !auth.logedin}"></i>
-      </a>
-      <span class="badge badge-pill badge-danger">{{notification}}</span>
+
+      <ul class="right-side-menu">
+        <li *ngIf="!auth.logedin" class="login">
+          <a [routerLink]="['/login']">Sign In</a>
+        </li>
+        <li *ngIf="auth.logedin">
+          <a (click)="auth.login()" routerLinkActive="router-link-active" >
+            <i class="fas fa-user-circle" [matMenuTriggerFor]="menu"></i>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Account</button>
+              <button mat-menu-item (click)="auth.signOut()">Sign out</button>
+            </mat-menu>
+          </a>
+          <span class="badge badge-pill badge-danger">{{notification}}</span>
+        </li>
+      </ul>
+
+
+
 
     </div>
   </div>

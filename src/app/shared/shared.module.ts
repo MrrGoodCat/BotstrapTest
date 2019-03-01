@@ -7,7 +7,10 @@ import {MatButtonModule,
         MatProgressSpinnerModule,
         MatMenuModule,
         MatSelectModule,
-        MatListModule
+        MatListModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule
         } from '@angular/material';
 import { ColorThemes } from './color-themes';
 import { ColorThemeMain } from './color-theme-main';
@@ -24,7 +27,10 @@ import { ColorThemeMain } from './color-theme-main';
     MatProgressSpinnerModule,
     MatMenuModule,
     MatSelectModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule
   ],
   providers: [ColorThemes, ColorThemeMain],
   exports: [
@@ -34,7 +40,10 @@ import { ColorThemeMain } from './color-theme-main';
     MatProgressSpinnerModule,
     MatMenuModule,
     MatSelectModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule
   ]
 })
 export class SharedModule { }
