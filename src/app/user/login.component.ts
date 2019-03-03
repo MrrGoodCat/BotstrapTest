@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from './authentication.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NgForm, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { NgForm, FormGroup, FormBuilder, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -11,9 +11,11 @@ import { NgForm, FormControl, Validators, ReactiveFormsModule } from '@angular/f
 export class LoginComponent implements OnInit {
 
   constructor(protected auth: AuthenticationService,
-              private router: Router) {
+              private router: Router,
+              private fb: FormBuilder) {
   }
 
+  loginForm: FormGroup;
   email = new FormControl('', [Validators.required, Validators.email]);
   name = new FormControl('', [Validators.minLength(3)]);
   firstName: string;
@@ -33,6 +35,9 @@ export class LoginComponent implements OnInit {
 
   }
   ngOnInit() {
+    this.loginForm = this.fb.group({
+
+    })
   }
 
 }
